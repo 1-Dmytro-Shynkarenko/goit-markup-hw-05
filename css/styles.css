@@ -134,6 +134,10 @@ color: var(--blue);
 fill: var(--blue);
 }
 
+.contact-link:focus .icon-contact{ 
+    fill: var(--blue);
+    }
+
 .contact-link:focus{ 
 color: var(--blue);
 }
@@ -151,7 +155,7 @@ color: var(--blue);
     position: absolute;
     width: 100%;
     height: 4px;
-    bottom: 0;
+    bottom: -1px;
     border-radius: 2px;
     display: block;
     background: var(--blue);
@@ -163,9 +167,21 @@ height: 16px;
 fill: #757575;
 }
 
+.icon-contact:hover{
+    fill: var(--blue); 
+}
+
+.icon-contact:focus{
+    fill: var(--blue); 
+}
+
 .icon-mail:hover{
 fill: var(--blue);
 }
+
+.icon-mail:focus{
+    fill: var(--blue);
+    }
 
 .banner{
 background: #C4C4C4;
@@ -387,7 +403,7 @@ margin-left: 30px;
 .social-list{
 display: flex;
 justify-content: space-between;
-padding-top: 16px;
+margin-top: 16px;
 padding-right: 32px;
 padding-left: 32px;
 }
@@ -421,6 +437,21 @@ fill: #AFB1B8;
 .icon-social:hover{
 fill: var(--white);
 }
+
+
+.social-item:focus .icon-social{
+    fill: var(--white);
+    }
+    
+    .social-item:focus{
+    background-color: var(--blue);
+    }
+    
+   
+    
+    .icon-social:focus{
+    fill: var(--white);
+    }
 
 
 .clients-section{
@@ -463,10 +494,26 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-property: fill, border-color, cursor;
 }
 
-.icon-clients{
-    transition-duration: 250ms;
+.clients-transition{
+transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: fill, border-color, cursor;
+transition-property: fill, border-color;
+}
+
+.clients-transition:focus .icon-clients{
+    border-color: var(--blue); 
+    fill: var(--blue); 
+}
+
+/*.clients-transition:hover .icon-clients{
+    border-color: var(--blue); 
+    fill: var(--blue); 
+}*/
+
+.icon-clients{
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-property: fill, border-color;
 }
 
 .icon-clients{
@@ -482,6 +529,16 @@ cursor: pointer;
 .clients-item:hover .icon-clients{
 fill: var(--blue);
 }
+
+/*.clients-item:focus{
+    fill: var(--blue);
+    border-color: var(--blue);
+    cursor: pointer;
+    }
+    
+    .clients-item:focus .icon-clients{
+    fill: var(--blue);
+    }*/
 
 .Map{
 font-style: normal;
@@ -569,7 +626,7 @@ background: rgba(255, 255, 255, 0.1);
 
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-property: fill, background-color;
+transition-property: background-color;
 }
 
 .social-item-footer:hover, .social-item-footer:focus {
